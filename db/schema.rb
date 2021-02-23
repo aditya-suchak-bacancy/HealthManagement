@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_22_091403) do
+ActiveRecord::Schema.define(version: 2021_02_23_053854) do
+
+  create_table "blood_sugar_details", force: :cascade do |t|
+    t.decimal "blood_sugar"
+    t.date "blood_sugar_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"

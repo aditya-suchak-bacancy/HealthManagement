@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  blood_sugar: 9.99
+  blood_sugar_date: 2021-02-23
+
+two:
+  blood_sugar: 9.99
+  blood_sugar_date: 2021-02-23
