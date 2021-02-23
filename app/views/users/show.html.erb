@@ -3,3 +3,24 @@
 <% if current_user == @user %>
   <h3>This is my page!!!</h3>
 <% end %>
+Name:
+<%= @user.name %>
+</br>
+Last Name:
+<%= @user.last_name %>
+</br>
+Age:
+<%= Date.today.year - @user.dob.year %>
+</br>
+Gender:
+<%= @user.gender %>
+</br>
+weight:
+<%= @user.weight %>kg
+</br>
+Height:
+<%= @user.height %>ft
+</br>  
+BMI:
+<%= @user.bmi %>
+

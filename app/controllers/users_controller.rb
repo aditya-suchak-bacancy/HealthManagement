@@ -8,20 +8,21 @@ class UsersController < ApplicationController
         @user = User.create(user_params)
         if @user.valid?
           @user.save
-          redirect_to @user
+          redirect_to '/login'
         else  
-          redirect :new
+          render :new
         end
     end
     
     def show
         @user = User.find(params[:id])
     end
+
     
     private
     
     def user_params
-        params.require(:user).permit(:username, :password, :password_confirmation)
+        params.require(:user).permit(:username, :password, :password_confirmation,:name,:last_name,:dob,:gender,:weight,:height)
     end
 end
 
