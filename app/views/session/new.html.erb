@@ -1,8 +1,15 @@
 <h2>Login</h2>
-<%= form_tag sessions_path do %>
+<% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+<% end %>
+<%= form_tag session_index_path do %>
     <%= label_tag "Username" %>
     <%= text_field_tag :username, nil, placeholder: "Username" %>
     <%= label_tag "Password" %>
     <%= password_field_tag :password, nil, placeholder: "Password" %>
     <%= submit_tag "Log In"%>
+    </br>
+    <%= link_to "New user?" ,new_user_path %>
 <% end %>

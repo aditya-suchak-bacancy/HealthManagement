@@ -1,5 +1,5 @@
 
-<h2>SignUp</h2> 
+<h2>Edit</h2> 
 <%= form_for @user do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username, placeholder: "Username" %>
@@ -25,7 +25,6 @@
     <%= f.number_field :height ,step: :any %>
     </br>
     </br>
-    <%= f.submit %>
+    <%= f.submit%>
     </br>
-    <%= link_to "Already a user?" ,new_session_path %>
 <% end %>

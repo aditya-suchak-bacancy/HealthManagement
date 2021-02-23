@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     has_secure_password
-    has_many :BloodSugarDetail
+    has_many :blood_sugar_details ,class_name: 'BloodSugarDetail'
     validates :username, presence: true, uniqueness: true
     validates :password , presence: true
     validates :password_confirmation , presence: true
@@ -10,10 +10,6 @@ class User < ApplicationRecord
     validates :gender , presence: true
     validates :weight , presence: true
     validates :height , presence: true
-    # validates :blood_sugar , presence: true
-    # validates :blood_pressure , presence: true
-    # validates :blood_presssure_date ,presence: true
-    # validates :blood_sugar_date , presence: true
 
     before_save :calculate_bmi
 
