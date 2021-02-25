@@ -5,6 +5,10 @@ class BloodSugarDetailsController < ApplicationController
     def index
         @user = User.find(params[:user_id])
         @blood_sugar_detail=@user.blood_sugar_details.all
+        @blood_sugar_detail= @blood_sugar_detail.order(blood_sugar_date: :desc)
+        @latest_checkup=@blood_sugar_detail.first[:blood_sugar_date]
+        #@blood_sugar_detail.first)
+        #byebug
     end
 
     def create
@@ -16,7 +20,6 @@ class BloodSugarDetailsController < ApplicationController
     end
 
     def destroy
-        #byebug
         @user = User.find(params[:user_id])
         @blood_sugar_detail = BloodSugarDetail.find(params[:id])
         @blood_sugar_detail.destroy

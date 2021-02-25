@@ -1,6 +1,4 @@
-<h1>Welcome to the page of <%= @user.username %></h2>
-
-
+<h1>Welcome <%= @user.username %></h2>
 Name:
 <%= @user.name %>
 </br>
@@ -21,15 +19,13 @@ Height:
 </br>  
 BMI:
 <%= @user.bmi %>
-</br>
 <% if @user.bmi <18.5 %>
   <p>you are underweight </p>
   <% elsif @user.bmi >=18.5 and @user.bmi <= 24.9 %>
   <p>you are healthy</p>
   <% else %>
   <p>you are overweight</p>
-<% end %>
-</br>
+<% end %> 
 <%= link_to "edit" , edit_user_path(@user) %>
 </br>
 <%= link_to "Show Blood Sugar Records" , show_blood_sugar_url(:user_id => @user.id) %>

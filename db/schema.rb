@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_092647) do
+ActiveRecord::Schema.define(version: 2021_02_24_120855) do
 
   create_table "blood_sugar_details", force: :cascade do |t|
     t.decimal "blood_sugar"
