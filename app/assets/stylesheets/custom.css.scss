@@ -1,0 +1,103 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.card-body-disp{
+    font-weight:bold;
+    font-size: 30px;
+    margin: .7%;
+    padding: .7%;
+    color:rgba(131,180,77,255) ;
+
+}
+.nav-link{
+    color: white;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.nav-link:hover {
+    background-color:rgba(131,180,77,255);
+  }
+
+.navbar-brand:hover{
+    background-color:opacify($color: #ffffff, $amount: 0);
+}
+
+.navbar-brand{
+    color: rgba(131,180,77,255);
+}
+.card-show {
+    float: left;
+    margin-right: 5%;
+}
+.card-text{
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 35px;;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 6px;
+
+}
+.card-border {
+    width: 40%;
+    height: 50%;
+    flex: 2;
+    border: 3px solid rgba(131,180,77,255);
+    padding-left: 11px;
+    padding-top: 11px;
+}
+.forms {
+    width: 40%;
+    height: 50%;
+    flex: 2;
+    border: 3px solid white;
+    padding-left: 11px;
+    padding-top: 11px;
+}
+.radiobtn {
+    padding: auto;
+    margin: auto;
+}
+.date {
+    width: 35%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 35px;;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 6px;
+    color: rgba(131,180,77,255);
+}
+
+.linkstyle {
+    color: rgba(131,180,77,255);
+    font-size: 15px;
+    background-color: white;
+}
+
+.linkstyle:hover{
+    color: green;
+    font-size: 15px;
+    background-color: white;
+}
+
+.card-text-new {
+    font-size: 17px;
+}
+
+.forms-rec {
+    width: 50%;
+    height: 50%;
+    flex: 2;
+    border: 3px solid white;
+    padding-left: 11px;
+    padding-top: 11px;
+}
+
+.nav-content {
+  color: rgba(131,180,77,255);
+  font-size: 15px;
+}

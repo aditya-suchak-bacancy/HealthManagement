@@ -1,9 +1,12 @@
-Your last checkup was on:
-<%= @latest_checkup %>
+<%= link_to "back" , @user,class:"btn btn-primary" %>
 </br>
+<%unless  @latest_checkup.is_a?(NilClass) %> 
+    <p class="card-text-new">Your last checkup was on:
+        <%= @latest_checkup %>
+    </p>
+    <% else %>
+     <p class="card-text-new"></br>Time for Blood Pressure Checkup! </p>
+<% end %>
 </br>
 <%= render @blood_pressure_detail %>
 </br>
-
-<%= link_to "back" , @user %>
-  

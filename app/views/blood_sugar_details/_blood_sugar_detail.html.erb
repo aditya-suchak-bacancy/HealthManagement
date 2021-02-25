@@ -1,9 +1,10 @@
-
-Blood Sugar:
-<%= blood_sugar_detail.blood_sugar %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <p class="card-text-new">Blood Sugar:
+    <%= blood_sugar_detail.blood_sugar %></p>
+    <p class="card-text-new">Blood Sugar Date:
+    <%= blood_sugar_detail.blood_sugar_date %></p>
+    <%= link_to "Delete" ,delet_blood_sugar_path(id: blood_sugar_detail.id) ,method: :delete, data: {confirm: "Are you sure?"},class:"linkstyle" %>
+  </div>
+</div>
 </br>
-Blood Sugar Date:
-<%= blood_sugar_detail.blood_sugar_date %>
-<%= link_to "Delete" ,delet_blood_sugar_path(id: blood_sugar_detail.id) ,method: :delete, data: {confirm: "Are you sure?"} %>
-</br>
-        

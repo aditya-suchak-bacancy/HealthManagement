@@ -6,7 +6,7 @@ class BloodSugarDetailsController < ApplicationController
         @user = User.find(params[:user_id])
         @blood_sugar_detail=@user.blood_sugar_details.all
         @blood_sugar_detail= @blood_sugar_detail.order(blood_sugar_date: :desc)
-        @latest_checkup=@blood_sugar_detail.first[:blood_sugar_date]
+        @latest_checkup=@blood_sugar_detail.first[:blood_sugar_date] unless @blood_sugar_detail.empty?
         #@blood_sugar_detail.first)
         #byebug
     end
