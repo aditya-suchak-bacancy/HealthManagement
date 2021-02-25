@@ -1,31 +1,5 @@
 
-<h2>SignUp</h2> 
-<%= form_for @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username, placeholder: "Username" %>
-    <%= f.label :password %>
-    <%= f.password_field :password, placeholder: "Password" %>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>    
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-    <%= f.label :dob %>
-    <%= f.date_field :dob, class: 'form-control' %>
-    <div>
-    <%= f.radio_button :gender, 'male' %> 
-    <%= f.label :gender, 'male', :value => 'male' %>
-    <%= f.radio_button :gender, 'female' %>
-    <%= f.label :gender, 'female', :value => 'female' %>
-    </div>
-    <%= f.label :weight %>
-    <%= f.number_field :weight, step: :any %>
-    <%= f.label :height %>
-    <%= f.number_field :height ,step: :any %>
-    </br>
-    </br>
-    <%= f.submit %>
-    </br>
-    <%= link_to "Already a user?" ,new_session_path %>
-<% end %>
+<h2 class="title">SignUp</h2> 
+<%= render 'form' %>
+</br>
+<%= link_to "Already a user? Login" ,new_session_path,class:"linkstyle" %>

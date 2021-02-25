@@ -1,11 +1,17 @@
+<div class="forms-rec">
 <%= form_with model: @blood_sugar_detail, url: new_blood_sugar_url do |f| %>
-  <div>
-    <%= f.label :blood_sugar %>
-    <%= f.number_field :blood_sugar, step: :any %>
+  <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">Blood Sugar</label>
+        <div class="col-sm-10">
+          <%= f.number_field :blood_sugar, step: :any %>
+        </div>
   </div>
-  <div>
-    <%= f.label :blood_sugar_date %>
-    <%= f.date_field :blood_sugar_date, class: 'form-control' %>
+  <div class="form-group row">
+        <label  class="col-sm-2 col-form-label">Blood Sugar Date</label>
+        <div class="col-sm-10">
+          <%= f.date_field :blood_sugar_date, class: 'form-control' %>
+        </div>
   </div>
-  <%= f.submit %> 
+  <%= f.submit  class:"btn btn-primary"%> 
 <% end %>
+</div>

@@ -1,41 +1,79 @@
-<h1>Welcome <%= @user.username %></h2>
-Name:
-<%= @user.name %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%=  link_to "Health Manager", @user,class:"navbar-brand" %>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Show Blood Sugar" , show_blood_sugar_url(:user_id => @user.id),class:"nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Add Blood Sugar" , new_blood_sugar_url(:user_id => @user.id),class:"nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Show Blood Pressure" , show_blood_pressure_url(:user_id => @user.id),class:"nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Add Blood Pressure" , new_blood_pressure_url(:user_id => @user.id),class:"nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Logout" , session_path,method: :delete,class:"nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
 </br>
-Last Name:
-<%= @user.last_name %>
+<div class="card-body-disp">
+    <% if @user.bmi <18.5 %>
+      <p>According to your BMI you are underweight </p>
+      <% elsif @user.bmi >=18.5 and @user.bmi <= 24.9 %>
+      <p>According to your BMI you are healthy</p>
+      <% else %>
+      <p>According to your BMI you are overweight</p>
+    <% end %> 
+</div>
+<% (@user.gender.eql?("male")) ? src="avatar_male.png" : src="avatar_female.png" %>
+<div class="card-border">
+<div class="card-show" style="width: 18rem;">
+  <%=image_tag(src, alt: "User Image",class:"card-img-top")%>
+</div>
+  <div class="card-body">
+    <p class="card-title">
+    <%= @user.username %>
+    </p>
+    <p class="card-text">
+      Name:
+      <%= @user.name %>
+    </p>
+    <p class="card-text">
+      Last Name:
+      <%= @user.last_name %>
+    </p>
+    <p class="card-text">
+      Age:
+      <%= Date.today.year - @user.dob.year %>
+    </p>
+    <p class="card-text">
+      Gender:
+      <%= @user.gender %>
+    </p>
+    <p class="card-text">
+      weight:
+      <%= @user.weight %>kg
+    </p>
+    <p class="card-text">
+      Height:
+      <%= @user.height %>ft
+    </p>
+    <p class="card-text">  
+      BMI:
+      <%= @user.bmi %>
+    </p>
+  </div>
+</div>
 </br>
-Age:
-<%= Date.today.year - @user.dob.year %>
-</br>
-Gender:
-<%= @user.gender %>
-</br>
-weight:
-<%= @user.weight %>kg
-</br>
-Height:
-<%= @user.height %>ft
-</br>  
-BMI:
-<%= @user.bmi %>
-<% if @user.bmi <18.5 %>
-  <p>you are underweight </p>
-  <% elsif @user.bmi >=18.5 and @user.bmi <= 24.9 %>
-  <p>you are healthy</p>
-  <% else %>
-  <p>you are overweight</p>
-<% end %> 
-<%= link_to "edit" , edit_user_path(@user) %>
-</br>
-<%= link_to "Show Blood Sugar Records" , show_blood_sugar_url(:user_id => @user.id) %>
-</br>
-<%= link_to "New Blood Sugar Record" , new_blood_sugar_url(:user_id => @user.id) %>
-</br>
-<%= link_to "Show Blood Pressure Records" , show_blood_pressure_url(:user_id => @user.id) %>
-</br>
-<%= link_to "New Blood Pressure Record" , new_blood_pressure_url(:user_id => @user.id) %>
-</br>
-<%= button_to "Logout",session_path, method: :delete %>
+  <%=  link_to "Edit",edit_user_path(@user) ,class:"btn btn-info" %>
+
+
+
+
 
 

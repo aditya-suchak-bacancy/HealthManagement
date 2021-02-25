@@ -6,7 +6,7 @@ class BloodPressureDetailsController < ApplicationController
         @user = User.find(params[:user_id])
         @blood_pressure_detail=@user.blood_pressure_details.all
         @blood_pressure_detail= @blood_pressure_detail.order(blood_pressure_date: :desc)
-        @latest_checkup=@blood_pressure_detail.first[:blood_pressure_date]
+        @latest_checkup=@blood_pressure_detail.first[:blood_pressure_date] unless @blood_pressure_detail.empty?
     end
 
     def create_pressure
