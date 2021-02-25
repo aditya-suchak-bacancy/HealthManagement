@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  s_blood_preesure: 1
+  d_blood_pressure: 1
+  blood_pressure_date: 2021-02-25
+
+two:
+  s_blood_preesure: 1
+  d_blood_pressure: 1
+  blood_pressure_date: 2021-02-25

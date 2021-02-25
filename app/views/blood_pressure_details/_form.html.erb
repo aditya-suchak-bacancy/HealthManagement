@@ -1,0 +1,16 @@
+<%= form_with model: @blood_pressure_detail, url: new_blood_pressure_url do |f| %>
+    <div>
+      <%= f.label :systolic_blood_pressure %>
+      <%= f.number_field :s_blood_pressure, step: :any %>
+    </div>
+    <div>
+        <%= f.label :diastolic_blood_pressure %>
+        <%= f.number_field :d_blood_pressure, step: :any %>
+    </div>
+    <div>
+      <%= f.label :blood_pressure_date %>
+      <%= f.date_field :blood_pressure_date, class: 'form-control' %>
+    </div>
+    <%= f.submit %> 
+  <% end %>
+  

@@ -32,6 +32,10 @@ BMI:
 </br>
 <%= link_to "New Blood Sugar Record" , new_blood_sugar_url(:user_id => @user.id) %>
 </br>
+<%= link_to "Show Blood Pressure Records" , show_blood_pressure_url(:user_id => @user.id) %>
+</br>
+<%= link_to "New Blood Pressure Record" , new_blood_pressure_url(:user_id => @user.id) %>
+</br>
 <%= button_to "Logout",session_path, method: :delete %>
 
 
