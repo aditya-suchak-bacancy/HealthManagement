@@ -24,6 +24,11 @@
   </div>
 </nav>
 </br>
+<% flash.each do |type, msg| %>
+    <div class="alert alert-primary" role="alert">
+      <%= msg %>
+    </div>
+<% end %>
 <div class="card-body-disp">
     <% if @user.bmi <18.5 %>
       <p class="underwight">According to your BMI you are underweight </p>
@@ -74,6 +79,7 @@
 </div>
 </br>
   <%=  link_to "Edit",edit_user_path(@user) ,class:"btn btn-info" %>
+  <%= link_to "Reminders" , show_remind_url(:user_id => @user.id) ,class:"btn btn-warning" %>
 
 
 

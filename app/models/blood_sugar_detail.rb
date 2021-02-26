@@ -7,8 +7,10 @@ class BloodSugarDetail < ApplicationRecord
     private
 
     def check_date
-        if blood_sugar_date > Date.today
-            errors.add(:blood_sugar_date,"must be your last checkup date")
+        unless blood_sugar_date.is_a?(NilClass)
+            if blood_sugar_date > Date.today
+                errors.add(:blood_sugar_date,"must be your last checkup date")
+            end
         end
     end
 end

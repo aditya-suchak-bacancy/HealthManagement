@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <p class="card-text-new">Reminder For:
+    <%= remind.remid_type %></p>
+    <p class="card-text-new">Reminder Date:
+    <%= remind.remind_date %></p>
+    <%= link_to "Delete" ,delete_remind_path(id: remind.id) ,method: :delete, data: {confirm: "Are you sure?"},class:"linkstyle" %>
+  </div>
+</div>
+</br>
