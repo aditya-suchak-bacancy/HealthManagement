@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root "users#new"
   #resources :blood_sugar_detail ,only: [:destroy]
-  resources :users, only: [:create, :show, :new,:edit,:update]
+  resources :users
+  #, only: [:create, :show, :new,:edit,:update]
   #get "/signup", to: "users#new"
   resources :session, only: [:new,:create, :destroy]
   # get "/login", to: "session#new"

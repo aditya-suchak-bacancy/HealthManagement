@@ -1,5 +1,6 @@
 class BloodPressureDetailsController < ApplicationController
     def new_pressure
+        @blood_pressure_detail=BloodPressureDetail.new
     end
 
     def index_pressure
@@ -10,11 +11,16 @@ class BloodPressureDetailsController < ApplicationController
     end
 
     def create_pressure
+        # byebug
         @user = User.find(params[:user_id])
         #byebug
-        @blood_pressure_detail=@user.blood_pressure_details.create(s_blood_pressure: params[:s_blood_pressure],d_blood_pressure: params[:d_blood_pressure],blood_pressure_date: params[:blood_pressure_date])
-        @blood_pressure_detail.save
-        redirect_to @user
+        @blood_pressure_detail=@user.blood_pressure_details.new(s_blood_pressure: params[:blood_pressure_detail][:s_blood_pressure],d_blood_pressure: params[:blood_pressure_detail][:d_blood_pressure],blood_pressure_date: params[:blood_pressure_detail][:blood_pressure_date])
+        if @blood_pressure_detail.save
+            redirect_to @user
+        else
+            render 'new_pressure'
+        end
+
     end
 
     def destroy
