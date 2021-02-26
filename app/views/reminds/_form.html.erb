@@ -1,19 +1,19 @@
 <div class="forms-rec">
 <%= form_with model: @reminds, url: new_remind_url do |f| %>
   <div class="form-group row">
-        <label  class="col-sm-2 col-form-label">Reminder For</label>
-        <div class="radiobtn">
-            <%= f.radio_button :remid_type, 'blood Sugar' %> 
-            <%= f.label :gender, 'blood sugar', :value => 'Blood Sugar' %>
-            <%= f.radio_button :remid_type, 'blood_pressure' %>
-            <%= f.label :gender, 'blood pressure', :value => 'Blood Pressure' %>
-        </div>
+    <label  class="col-sm-2 col-form-label">Reminder For</label>
+    <div class="radiobtn">
+      <%= f.radio_button :remid_type, 'blood Sugar' %> 
+        <%= f.label :gender, 'blood sugar', :value => 'Blood Sugar' %>
+        <%= f.radio_button :remid_type, 'blood_pressure' %>
+        <%= f.label :gender, 'blood pressure', :value => 'Blood Pressure' %>
+      </div>
   </div>
   <div class="form-group row">
-        <label  class="col-sm-2 col-form-label">Reminder Date</label>
-        <div class="col-sm-10">
-          <%= f.date_field :remind_date, class: 'form-control' %>
-        </div>
+      <label  class="col-sm-2 col-form-label">Reminder Date</label>
+      <div class="col-sm-10">
+        <%= f.date_field :remind_date, class: 'form-control' %>
+      </div>
   </div>
   <%= f.submit  class:"btn btn-primary"%> 
 <% end %>

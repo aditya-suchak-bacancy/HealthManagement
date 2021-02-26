@@ -78,11 +78,5 @@
   </div>
 </div>
 </br>
-  <%=  link_to "Edit",edit_user_path(@user) ,class:"btn btn-info" %>
-  <%= link_to "Reminders" , show_remind_url(:user_id => @user.id) ,class:"btn btn-warning" %>
-
-
-
-
-
-
+<%=  link_to "Edit",edit_user_path(@user) ,class:"btn btn-info" %>
+<%= link_to "Reminders" , show_remind_url(:user_id => @user.id) ,class:"btn btn-warning" %>
