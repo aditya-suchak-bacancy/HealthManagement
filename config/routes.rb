@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root "users#new"
   resources :users 
-  #,only: [:new,:create,:show,:edit,:update,:destroy]
   resources :session, only: [:new,:create, :destroy]
   get "/user/:user_id/index", to: "blood_sugar_details#index", as: "show_blood_sugar"
   post "user/:user_id/new", to: "blood_sugar_details#create", as: "new_blood_sugar"
@@ -15,5 +14,4 @@ Rails.application.routes.draw do
   post "/user/:user_id/new_remind" , to: "reminds#create_remind", as: "new_remind"
   get "/user/:user_id/new_remind" , to: "reminds#new_remind"
   delete "/user/:user_id/index_remind" , to: "reminds#destroy" , as: "delete_remind"
-
 end

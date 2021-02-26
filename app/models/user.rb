@@ -16,9 +16,7 @@ class User < ApplicationRecord
     before_save :calculate_bmi
     after_validation :update_name
 
-
     private
-
     def calculate_bmi
         self.bmi = self.weight / ((self.height*0.3048)**2)
         self.bmi = self.bmi.round(2)
@@ -36,5 +34,4 @@ class User < ApplicationRecord
         self.name = name.downcase.titleize
         self.last_name = last_name.downcase.titleize
     end
-
 end

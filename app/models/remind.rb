@@ -4,9 +4,7 @@ class Remind < ApplicationRecord
     validates :remid_type , presence: true
     validate :check_date
 
-
     private
-
     def check_date
         unless remind_date.is_a?(NilClass)
             if remind_date < Date.today
@@ -14,5 +12,4 @@ class Remind < ApplicationRecord
             end
         end
     end
-
 end

@@ -1,14 +1,14 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-        <p class="card-text-new">Systolic Blood Pressure:
-            <%= blood_pressure_detail.s_blood_pressure %>
-        </p>
-        <p class="card-text-new">Diastolic Blood Pressure:
-            <%= blood_pressure_detail.d_blood_pressure %>
-        </p>
-        <p class="card-text-new">Blood Pressure Date:
-        <%= blood_pressure_detail.blood_pressure_date %></p>
-        <%= link_to "Delete" ,delet_blood_pressure_path(id: blood_pressure_detail.id) ,method: :delete, data: {confirm: "Are you sure?"},class:"linkstyle" %>
+      <p class="card-text-new">Systolic Blood Pressure:
+          <%= blood_pressure_detail.s_blood_pressure %>
+      </p>
+      <p class="card-text-new">Diastolic Blood Pressure:
+        <%= blood_pressure_detail.d_blood_pressure %>
+      </p>
+      <p class="card-text-new">Blood Pressure Date:
+      <%= blood_pressure_detail.blood_pressure_date %></p>
+      <%= link_to "Delete" ,delet_blood_pressure_path(id: blood_pressure_detail.id) ,method: :delete, data: {confirm: "Are you sure?"},class:"linkstyle" %>
   </div>
 </div>
 </br>
