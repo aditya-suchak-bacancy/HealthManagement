@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  remid_type: MyString
+  remind_date: 2021-02-26
+
+two:
+  remid_type: MyString
+  remind_date: 2021-02-26

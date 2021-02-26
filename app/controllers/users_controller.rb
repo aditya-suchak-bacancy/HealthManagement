@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
     before_action :authorized ,only: [:show]
+
+    def index
+    end
+    
     def new
         @user = User.new
     end
@@ -16,6 +20,11 @@ class UsersController < ApplicationController
     
     def show
         @user = User.find(params[:id])
+        unless @user.reminds.empty?
+            if @user.reminds.last[:remind_date] == Date.today
+                flash[:notice] = "you have a checkup for #{@user.reminds.first[:remid_type]} today"
+            end
+        end
     end
 
     def edit

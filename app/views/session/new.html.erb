@@ -17,8 +17,10 @@
 </br>
 <%= link_to "New user?" ,new_user_path,class:"linkstyle" %>
 </br>
-<% flash.each do |type, msg| %>
-  <div>
-    <%= msg %>
-  </div>
+<% flash.each do |t, msg| %>
+  <% if t.index('a')== 0 %>
+    <div class="alert alert-danger" role="alert">
+        <%= msg %>
+    </div>
+  <% end %>
 <% end %>

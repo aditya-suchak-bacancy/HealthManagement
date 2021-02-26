@@ -1,0 +1,17 @@
+<%= link_to "back" , @user,class:"btn btn-primary" %>
+<%= link_to "Add" , new_remind_url(:user_id => @user.id),class:"btn btn-info" %>
+<div>
+<%unless  @upcoming.is_a?(NilClass) %> 
+    </br><p class="alert alert-info" role="alert">Your Upcoming Checkup is on:
+    <%= @upcoming %>
+    </p>
+    <% else %>
+     <p class="alert alert-info" role="alert"></br>Time for Setting a Reminder! </p>
+<% end %>
+<%= render @remind %>
+</br>
+</div> 
+
+
+
+  
