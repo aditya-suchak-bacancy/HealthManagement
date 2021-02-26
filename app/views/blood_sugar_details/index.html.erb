@@ -1,11 +1,13 @@
 <%= link_to "back" , @user,class:"btn btn-primary" %>
+</br>
+</br>
 <div>
 <%unless  @latest_checkup.is_a?(NilClass) %> 
-    <p class="card-text-new">Your last checkup was on:
+    <p class="alert alert-info" role="alert">Your last checkup was on:
     <%= @latest_checkup %>
     </p>
     <% else %>
-     <p class="card-text-new"></br>Time for Blood Sugar Checkup! </p>
+     <p class="alert alert-info" role="alert"></br>Time for Blood Sugar Checkup! </p>
 <% end %>
 <%= render @blood_sugar_detail %>
 </br>

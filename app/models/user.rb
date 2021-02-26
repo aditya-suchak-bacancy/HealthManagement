@@ -1,8 +1,8 @@
 class User < ApplicationRecord
     has_secure_password
-    has_many :blood_sugar_details ,class_name: 'BloodSugarDetail'
-    has_many :blood_pressure_details ,class_name: 'BloodPressureDetail'
-    has_many :reminds , class_name: 'Remind'
+    has_many :blood_sugar_details ,class_name: 'BloodSugarDetail',dependent: :destroy
+    has_many :blood_pressure_details ,class_name: 'BloodPressureDetail',dependent: :destroy
+    has_many :reminds , class_name: 'Remind',dependent: :destroy
     validates :username, presence: true, uniqueness: true
     validates :password , presence: true
     validates :password_confirmation , presence: true
