@@ -1,1 +1,1 @@
-This a Health Mangaement System
+This a Health Management System
