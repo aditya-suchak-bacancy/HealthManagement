@@ -17,17 +17,20 @@
       <li class="nav-item active">
         <%= link_to "Logout" , session_path,method: :delete,class:"nav-link" %>
       </li>
+      <li class="nav-item active">
+        <%= link_to "Delete Account" , user_path,method: :delete, data: {confirm: "Are you sure?"},class:"nav-link" %>
+      </li>
     </ul>
   </div>
 </nav>
 </br>
 <div class="card-body-disp">
     <% if @user.bmi <18.5 %>
-      <p>According to your BMI you are underweight </p>
+      <p class="underwight">According to your BMI you are underweight </p>
       <% elsif @user.bmi >=18.5 and @user.bmi <= 24.9 %>
-      <p>According to your BMI you are healthy</p>
+      <p class="healthy">According to your BMI you are healthy</p>
       <% else %>
-      <p>According to your BMI you are overweight</p>
+      <p class="overweight">According to your BMI you are overweight</p>
     <% end %> 
 </div>
 <% (@user.gender.eql?("male")) ? src="avatar_male.png" : src="avatar_female.png" %>

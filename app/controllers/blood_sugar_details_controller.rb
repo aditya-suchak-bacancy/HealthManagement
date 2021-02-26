@@ -1,5 +1,6 @@
 class BloodSugarDetailsController < ApplicationController
     def new
+        @blood_sugar_detail=BloodSugarDetail.new
     end
 
     def index
@@ -13,10 +14,13 @@ class BloodSugarDetailsController < ApplicationController
 
     def create
         @user = User.find(params[:user_id])
-        @blood_sugar_detail=@user.blood_sugar_details.create(blood_sugar: params[:blood_sugar],blood_sugar_date: params[:blood_sugar_date])
+        @blood_sugar_detail=@user.blood_sugar_details.new(blood_sugar: params[:blood_sugar_detail][:blood_sugar],blood_sugar_date: params[:blood_sugar_detail][:blood_sugar_date])
         # @user.blood_sugar_detail @blood_sugar_detail
-        @blood_sugar_detail.save
-        redirect_to @user
+        if @blood_sugar_detail.save
+            redirect_to @user
+        else
+            render 'new'
+        end
     end
 
     def destroy

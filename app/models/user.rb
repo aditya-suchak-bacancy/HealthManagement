@@ -11,8 +11,9 @@ class User < ApplicationRecord
     validates :gender , presence: true
     validates :weight , presence: true
     validates :height , presence: true
-
+    validate :check_date
     before_save :calculate_bmi
+    after_validation :update_name
 
 
     private
@@ -20,6 +21,17 @@ class User < ApplicationRecord
     def calculate_bmi
         self.bmi = self.weight / ((self.height*0.3048)**2)
         self.bmi = self.bmi.round(2)
+    end
+
+    def check_date
+        if dob > Date.today
+            errors.add(:dob,"is invalid")
+        end
+    end
+
+    def update_name
+        self.name = name.downcase.titleize
+        self.last_name = last_name.downcase.titleize
     end
 
 end
