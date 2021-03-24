@@ -1,9 +1,9 @@
 x=Faker::Internet.password(min_length: 6)
 FactoryBot.define do
   factory :user do
-    username {Faker::Internet.name}
-    name {Faker::Internet.name}
-    last_name {Faker::Internet.name}
+    username {Faker::Name.unique.name}
+    name {Faker::Name.first_name}
+    last_name {Faker::Name.last_name}
     password { "#{x}" }
     password_confirmation  { "#{x}" }
     dob {Date.today-100}

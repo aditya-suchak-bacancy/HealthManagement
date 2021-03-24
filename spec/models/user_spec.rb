@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   end
 
   it "is not valid" do
-    user.username=nil
+    user.dob=Date.today+1
     expect(user).to_not be_valid
   end
 end

@@ -364,20 +364,42 @@
           null
         ]
       },
+      "/home/aditya/railsprojects/HealthManagement/spec/factories/blood_sugar_detail.rb": {
+        "lines": [
+          1,
+          1,
+          5,
+          5,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/aditya/railsprojects/HealthManagement/spec/factories/remind.rb": {
+        "lines": [
+          1,
+          1,
+          3,
+          3,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/aditya/railsprojects/HealthManagement/spec/factories/user.rb": {
         "lines": [
           1,
           1,
           1,
-          18,
-          18,
-          18,
-          18,
-          18,
-          18,
-          18,
-          18,
-          18,
+          28,
+          28,
+          28,
+          28,
+          28,
+          28,
+          28,
+          28,
+          28,
           null,
           null
         ]
@@ -473,6 +495,78 @@
           null
         ]
       },
+      "/home/aditya/railsprojects/HealthManagement/spec/models/blood_sugar_detail_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          3,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/aditya/railsprojects/HealthManagement/app/models/blood_sugar_detail.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          7,
+          6,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/aditya/railsprojects/HealthManagement/spec/models/remind_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          3,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/aditya/railsprojects/HealthManagement/app/models/remind.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          4,
+          4,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/home/aditya/railsprojects/HealthManagement/spec/models/user_spec.rb": {
         "lines": [
           1,
@@ -513,21 +607,91 @@
           null,
           1,
           1,
-          16,
-          16,
+          26,
+          26,
           null,
           null,
           1,
-          23,
-          19,
-          0,
+          33,
+          29,
+          1,
           null,
           null,
           null,
           null,
           1,
-          23,
-          23,
+          33,
+          33,
+          null,
+          null
+        ]
+      },
+      "/home/aditya/railsprojects/HealthManagement/spec/requests/blood_sugar_details_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          6,
+          2,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          3,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -671,6 +835,60 @@
           null
         ]
       },
+      "/home/aditya/railsprojects/HealthManagement/app/controllers/blood_sugar_details_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/aditya/railsprojects/HealthManagement/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
       "/home/aditya/railsprojects/HealthManagement/app/controllers/users_controller.rb": {
         "lines": [
           1,
@@ -730,67 +948,8 @@
           null,
           null
         ]
-      },
-      "/home/aditya/railsprojects/HealthManagement/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/home/aditya/railsprojects/HealthManagement/app/models/remind.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/aditya/railsprojects/HealthManagement/app/models/blood_sugar_detail.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1616494847
+    "timestamp": 1616582285
   }
 }
