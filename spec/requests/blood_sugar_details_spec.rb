@@ -53,14 +53,6 @@ RSpec.describe "BloodSugarDetails", type: :request do
       it { expect { delete_blood_sugar }.to change(BloodSugarDetail, :count).by(0) }
     end
 
-    # context 'with invalid params' do
-    #   let(:delete_blood_sugar) do
-		# 		blood_sugar_detail.user = user
-		# 		blood_sugar_detail.save
-    #     delete "/user/#{user.id}/index", params: { id: blood_sugar_detail.id }
-    #   end
-    #   it { expect { delete_blood_sugar }.not_to change(BloodSugarDetail, :count) }
-    # end
   end
 
 end
