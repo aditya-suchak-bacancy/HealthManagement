@@ -3,10 +3,6 @@ require 'rails_helper'
 RSpec.describe "Users", type: :request do
   let(:user) { create(:user) }
 
-  # before do
-  #   login_as(user)
-  # end
-
   describe 'GET #new' do
     it 'New User' do
       get '/users/new'
@@ -113,23 +109,4 @@ RSpec.describe "Users", type: :request do
       end
     end
   end
-
-  #   describe 'GET users#edit' do
-  #   context 'with valid params' do
-  #     it 'Edit User' do
-  #       expect{
-  #         get "/users/#{user.id}/edit" }.to change(User,:count).by(1)
-  #     end
-  #   end
-
-  #   context 'with invalid params' do
-  #     it 'Do Not edit user' do
-  #       expect{
-  #         get "/users/#{user.id}/edit"
-  #       }.not_to change(User,:count)
-  #     end
-  #   end
-  # end
-
-
 end
